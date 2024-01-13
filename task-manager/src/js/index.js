@@ -35,7 +35,7 @@ let tasks = {
     id: 2,
     title: "Implement Dark Mode",
     created: "2023-12-23T10:30",
-    deadline: "2024-01-05T18:00",
+    deadline: "2024-01-20T18:00",
     doneTime: null,
     done: false,
     notified: false,
@@ -344,8 +344,7 @@ function setupNotifications() {
       for (const [key, task] of Object.entries(tasks)) {
         const difference = new Date(task.deadline) - new Date();
         const differenceMinutes = Math.round(difference / (1000 * 60));
-        if (differenceMinutes <= DEADLINE_NOTIFICATION_MINUTES && !task.notified) {
-          console.log(differenceMinutes);
+        if (differenceMinutes <= DEADLINE_NOTIFICATION_MINUTES && !task.notified && !task.done) {
           task.notified = true;
           const notification = new Notification(task.title, {body: "Deadline is approaching"});
           notification.onclick = () => {

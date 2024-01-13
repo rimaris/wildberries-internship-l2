@@ -105,8 +105,8 @@ submitBtn.addEventListener("click", () => {
 });
 
 restartBtn.addEventListener("click", () => {
-  let minNumber = parseInt(minInput.value);
-  let maxNumber = parseInt(maxInput.value);
+  minNumber = parseInt(minInput.value);
+  maxNumber = parseInt(maxInput.value);
   if (isNaN(minNumber) || isNaN(maxNumber)) {
     alert('invalid min/max numbers');
     return;
