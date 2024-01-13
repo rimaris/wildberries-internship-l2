@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Calories Calculator</title>
+    <link rel="stylesheet" href="./assets/styles/styles.css" />
+    <script defer src="./js/index.js" type="module"></script>
+  </head>
+  <body>
+    <header class="header">
+      <h1>My Food Diary</h1>
+    </header>
+    <main class="main">
+      <h2>Diary</h2>
+      <div class="date-selector">
+        <button class="button date-selector__button_prev">&lt;</button>
+        <span class="date-selector__value">01 January 2024</span>
+        <button class="button date-selector__button_next">&gt;</button>
+      </div>
+      <button class="button clear-diary-btn">Clear diary</button>
+      <div class="meal-block meal-block_breakfast">
+        <h2 class="meal-block__title">Breakfast</h2>
+        <div class="food-list">
+          <div class="food-list__heading">
+            <div class="product-name">Title</div>
+            <div class="product-weight">Weight</div>
+            <div class="product-protein">Prot</div>
+            <div class="product-fats">Fat</div>
+            <div class="product-carbs">Carb</div>
+            <div class="product-calories">Cals</div>
+          </div>
+          <ul></ul>
+          <button class="add-product-btn button">Add Product</button>
+        </div>
+      </div>
+
+      <div class="meal-block meal-block_lunch">
+        <h2 class="meal-block__title">Lunch</h2>
+        <div class="food-list">
+          <div class="food-list__heading">
+            <div class="product-name">Title</div>
+            <div class="product-weight">Weight</div>
+            <div class="product-protein">Prot</div>
+            <div class="product-fats">Fat</div>
+            <div class="product-carbs">Carb</div>
+            <div class="product-calories">Cals</div>
+          </div>
+          <ul></ul>
+          <button class="add-product-btn button">Add Product</button>
+        </div>
+      </div>
+
+      <div class="meal-block meal-block_dinner">
+        <h2 class="meal-block__title">Dinner</h2>
+        <div class="food-list">
+          <div class="food-list__heading">
+            <div class="product-name">Title</div>
+            <div class="product-weight">Weight</div>
+            <div class="product-protein">Prot</div>
+            <div class="product-fats">Fat</div>
+            <div class="product-carbs">Carb</div>
+            <div class="product-calories">Cals</div>
+          </div>
+          <ul></ul>
+          <button class="add-product-btn button">Add Product</button>
+        </div>
+      </div>
+
+      <div class="summary">
+        <h2>Summary</h2>
+        <div class="summary__haeding">
+          <div class="summary__button-container">
+            <button class="set-target-calories-btn button">
+              Set target daily intake
+            </button>
+          </div>
+          <div></div>
+          <div>Prot</div>
+          <div>Fats</div>
+          <div>Carbs</div>
+          <dib>Cals</dib>
+        </div>
+        <div class="summary__values">
+          <div class="daily-calorie-intake-warning">You have consumed 0% of your daily calorie intake</div>
+          <div></div>
+          <div class="summary__protein">50</div>
+          <div class="summary__fats">23</div>
+          <div class="summary__carbohydrates">30</div>
+          <div class="summary__calories">2000</div>
+        </div>
+      </div>
+
+      <h2>Calories by dates</h2>
+      <div class="histogram">
+        <div class="histogram__bars">
+          <div class="histogram__bar" style="height: 120px"></div>
+          <div class="histogram__bar" style="height: 90px"></div>
+          <div class="histogram__bar" style="height: 75px"></div>
+          <div class="histogram__bar" style="height: 110px"></div>
+        </div>
+
+        <div class="histogram__dates">
+          <div class="histogram__date">1</div>
+          <div class="histogram__date">2</div>
+          <div class="histogram__date">3</div>
+          <div class="histogram__date">4</div>
+        </div>
+        <div class="histogram__y-ticks">
+          <div class="histogram__y-tick">
+            <div class="histogram__y-label">100</div>
+          </div>
+          <div class="histogram__y-tick">
+            <div class="histogram__y-label">90</div>
+          </div>
+          <div class="histogram__y-tick">
+            <div class="histogram__y-label">80</div>
+          </div>
+          <div class="histogram__y-tick">
+            <div class="histogram__y-label">70</div>
+          </div>
+          <div class="histogram__y-tick">
+            <div class="histogram__y-label">60</div>
+          </div>
+          <div class="histogram__y-tick">
+            <div class="histogram__y-label">50</div>
+          </div>
+          <div class="histogram__y-tick">
+            <div class="histogram__y-label">40</div>
+          </div>
+          <div class="histogram__y-tick">
+            <div class="histogram__y-label">30</div>
+          </div>
+          <div class="histogram__y-tick">
+            <div class="histogram__y-label">20</div>
+          </div>
+          <div class="histogram__y-tick">
+            <div class="histogram__y-label">10</div>
+          </div>
+          <div class="histogram__y-tick">
+            <div class="histogram__y-label">0</div>
+          </div>
+        </div>
+      </div>
+      <div class="modal add-product-modal">
+        <div class="modal__content">
+          <span class="modal__close-btn">&times;</span>
+          <h2>Add New Product</h2>
+          <form class="modal__form add-product-form">
+            <label for="modal__product-name">Product Name:</label>
+            <input
+              type="text"
+              id="modal__product-name"
+              name="modal__product-name"
+              min="0"
+              required
+            />
+
+            <label for="modal__product-protein">Proteins per 100g:</label>
+            <input
+              type="number"
+              id="modal__product-protein"
+              name="modal__product-protein"
+              step="0.1"
+              min="0"
+              required
+            />
+
+            <label for="modal__product-fats">Fats per 100g:</label>
+            <input
+              type="number"
+              id="modal__product-fats"
+              name="modal__product-fats"
+              step="0.1"
+              min="0"
+              required
+            />
+
+            <label for="modal__product-carbs">Carbs per 100g:</label>
+            <input
+              type="number"
+              id="modal__product-carbs"
+              name="modal__product-carbs"
+              step="0.1"
+              min="0"
+              required
+            />
+
+            <label for="modal__product-calories">Calories per 100g:</label>
+            <input
+              type="number"
+              id="modal__product-calories"
+              name="modal__product-calories"
+              required
+              min="0"
+            />
+
+            <label for="modal__product-weight">Product Weight (grams):</label>
+            <input
+              type="number"
+              id="modal__product-weight"
+              name="modal__product-weight"
+              required
+              min="0"
+            />
+
+            <label for="modal__meal-block">Select Meal Block:</label>
+            <select id="modal__meal-block" name="modal__meal-block" required>
+              <option value="breakfast">Breakfast</option>
+              <option value="lunch">Lunch</option>
+              <option value="dinner">Dinner</option>
+            </select>
+
+            <button
+              class="modal__submit-btn modal__add-product-btn button"
+              type="button"
+            >
+              Add Product
+            </button>
+          </form>
+        </div>
+      </div>
+
+      <div class="modal modal_narrow add-target-calories-modal">
+        <div class="modal__content">
+          <span class="modal__close-btn">&times;</span>
+          <h2>Set target daily intake</h2>
+          <form class="modal__form">
+            <label for="modal__target-calories">Target Calories:</label>
+            <input
+              type="number"
+              id="modal__target-calories"
+              name="modal__target-calories"
+              required
+            />
+            <button class="modal__submit-btn button" type="button">
+              Save target calories
+            </button>
+          </form>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>

@@ -1,0 +1,153 @@
+body {
+  font-family: Arial, sans-serif;
+  font-size: 16px;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+.sidebar {
+  width: 250px;
+  min-width: 250px;
+  background-color: #f0f0f0;
+  box-sizing: border-box;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.task-list {
+  overflow: scroll;
+}
+
+.task-snippet {
+  cursor: pointer;
+  padding: 10px;
+  border: 1px solid #ccc;
+}
+
+.task-snippet:hover:not(.task-snippet_selected) {
+  background-color: #e0e0e0;
+}
+
+.task-snippet_selected {
+  background-color: #8c8c8c;
+}
+
+.task-snippet__title {
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.task-details {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  max-height: 100vh;
+  overflow: scroll;
+  box-sizing: border-box;
+}
+
+.main__task-details {
+  padding: 20px;
+}
+
+.task-details__property {
+  border-radius: 3px;
+  padding: 5px;
+  margin-bottom: 5px;
+  border: none;
+  outline: none;
+}
+
+.task-details__description {
+  flex: 1;
+  overflow: scroll;
+}
+
+.task-details__delete-btn {
+  padding: 5px;
+  width: 60px;
+  margin-left: 5px;
+}
+
+.task-details__title {
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.sort-by {
+  display: flex;
+}
+
+.sort-by__select {
+  flex-grow: 1;
+  padding: 5px;
+  font-size: 16px;
+}
+
+.create-new-task-btn {
+  padding: 5px;
+}
+
+.modal h2 {
+  padding: 5px;
+}
+
+.modal {
+  display: none;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+.modal_shown {
+  display: flex;
+}
+
+.modal__content {
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  padding: 20px;
+  width: 90%;
+  height: 600px;
+  max-height: 600px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.modal__close-btn {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.modal__close-btn:hover,
+.modal__close-btn:focus {
+  color: black;
+}
+
+.hidden  {
+  display: none;
+}
+
+.modal__task-details {
+  flex: 1;
+  display: flex;
+}
+
+.modal__task-details .task-details__description {
+  flex: 1;
+}
+
+.modal__submit-btn {
+  padding: 5px;
+}
+

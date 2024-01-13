@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guess Number</title>
+    <link rel="stylesheet" href="./assets/styles/styles.css">
+    <script defer src="./js/index.js"></script>
+</head>
+<body>
+    <div class="container">
+        <h1>Guess the number</h1>
+        <input type="number" placeholder="Enter the number" class="number-input">
+        <button type="submit" class="submit-btn">Ок</button>
+        <p class="warning"></p>
+        <p class="suggestion">The hidden number is less than yours</p>
+        <p class="additional-suggestion"></p>
+        <p>Attempt number: <span class="attemt-span">1</span></p>
+        <label for="min-input">Min number</label>
+        <input type="number" min="1" placeholder="Min" value="1" id="min-input"> <br>
+        <label for="max-input">Max number</label>
+        <input type="number" placeholder="Max" value="100" id="max-input">
+        <br>
+        <button class="restart">Restart</button>
+    </div>
+</body>
+</html>

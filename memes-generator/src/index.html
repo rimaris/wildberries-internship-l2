@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Memes Generator</title>
+    <link rel="stylesheet" href="./assets/styles/styles.css" />
+    <script defer src="./js/index.js"></script>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Memes generator</h1>
+      <canvas class="meme-canvas"> </canvas>
+      <div class="controls">
+        <button class="add-text-btn">Add Text</button>
+        <button class="download-btn">Download meme</button>
+        <button class="select-img-btn">Select image</button>
+        <input type="file" class="select-file-input">
+      </div>
+      <div class="text-settings">
+        <form action="">
+          <label for="color-select">Цвет:</label>
+          <select name="colors" id="color-select">
+            <option value="red">red</option>
+            <option value="blue">blue</option>
+            <option value="black">black</option>
+            <option value="white">white</option>
+          </select>
+          <label for="font-family-select">Шрифт:</label>
+          <select name="font-family" id="color-family-select">
+            <option value="Georgia">Georgia</option>
+            <option value="Gill Sans">Gill Sans</option>
+            <option value="sans-serif">sans-serif</option>
+            <option value="serif">serif</option>
+          </select>
+
+          <label for="font-size-input">Размер шрифта:</label>
+          <input type="number" name="font-size" id="font-size-input" min="1" max="99" value="24">
+        </form>
+      </div>
+    </div>
+
+  </body>
+</html>

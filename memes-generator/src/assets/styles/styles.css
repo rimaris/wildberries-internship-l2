@@ -1,0 +1,118 @@
+/* * {
+  box-sizing: border-box;
+}
+
+.container {
+  width: 800px;
+  margin: 0 auto;
+  border: 1px solid black;
+  text-align: center;
+}
+
+
+.meme-canvas {
+  position: relative;
+  height: auto;
+  width: auto;
+}
+
+.meme-text-container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  font-size: 30px;
+  transform: translate(-50%, -50%);
+  color: white;
+  font-weight: bold;
+  text-transform: uppercase;
+  cursor: move;
+}
+
+label {
+  display: block;
+}
+
+.select-file-input {
+  display: none;
+} */
+
+body {
+  font-family: "Arial", sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f8f9fa;
+}
+
+.container {
+  max-width: 800px;
+  margin: 50px auto;
+  padding: 20px;
+  background-color: #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  text-align: center;
+}
+
+h1 {
+  color: #007bff;
+}
+
+.meme-canvas {
+  width: auto;
+  height: auto;
+  border: 2px solid #007bff;
+  margin: 20px 0;
+}
+
+.controls {
+  margin: 20px 0;
+}
+
+button {
+  padding: 10px 20px;
+  margin: 0 5px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.add-text-btn,
+.download-btn,
+.select-img-btn {
+  background-color: #007bff;
+  color: #fff;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.download-btn:hover,
+.add-text-btn:hover,
+.select-img-btn:hover {
+  background-color: #0056b3;
+}
+
+.select-file-input {
+  display: none;
+}
+
+.text-settings {
+  margin: 20px 0;
+}
+
+form {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+label {
+  margin: 0 10px;
+  font-weight: bold;
+  color: #333;
+}
+
+select,
+input[type="number"] {
+  padding: 8px;
+  margin: 5px;
+  font-size: 14px;
+}

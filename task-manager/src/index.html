@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Task Manager</title>
+    <link rel="stylesheet" href="./assets/styles/styles.css" />
+    <script defer src="./js/index.js"></script>
+  </head>
+  <body>
+    <div class="sidebar">
+      <button class="create-new-task-btn">Create</button>
+      <div class="sidebar__controls">
+        <label>
+          Sort by:
+          <div class="sort-by sidebar__sort-by">
+            <select name="sort_by" class="sort-by__select">
+              <option value="1">Created time</option>
+              <option value="2">Done time</option>
+            </select>
+            <button class="sort-by__order-btn">&darr;</button>
+          </div>
+        </label>
+      </div>
+      <div class="task-list">
+        <div class="task-snippet">
+          <div class="task-snippet__title">Task 1</div>
+          <div class="task-snippet__status">In Progress</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="task-details main__task-details">
+      <input
+        type="text"
+        class="task-details__title task-details__property"
+        contenteditable="true"
+        value="Task title"
+      />
+      <label class="task-details__property"
+        ><input
+          type="checkbox"
+          name="done"
+          class="task-details__done-checkbox"
+        />
+        Done</label
+      >
+      <div class="task-details__property">
+        Deadline <input type="datetime-local" class="task-details__deadline" />
+      </div>
+      <button class="task-details__delete-btn">Delete</button>
+      <div
+        class="task-details__description task-details__property"
+        contenteditable="true"
+      ></div>
+    </div>
+
+    <div class="modal">
+      <div class="modal__content">
+        <div class="modal__heading">
+          <span class="modal__close-btn">&times;</span>
+        </div>
+        <div class="task-details modal__task-details">
+          <input
+            type="text"
+            class="task-details__title task-details__property"
+            contenteditable="true"
+            placeholder="Task title"
+          />
+          <div class="task-details__property">
+            Deadline
+            <input type="datetime-local" class="task-details__deadline" />
+          </div>
+          <div
+            class="task-details__description task-details__property"
+            contenteditable="true"
+          >
+            Enter task description...
+          </div>
+          <button class="modal__submit-btn">Create</button>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

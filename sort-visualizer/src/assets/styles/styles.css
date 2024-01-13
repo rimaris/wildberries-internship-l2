@@ -1,0 +1,31 @@
+.header {
+    text-align: center;
+}
+
+.histogram {
+  position: relative;
+  height: 600px;
+}
+
+.histogram__bars {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  border-bottom: 1px solid black;
+  border-left: 1px solid black;
+  height: 100%;
+}
+
+.histogram__bar {
+  height: 600px;
+  width: 30px;
+  background-color: #4caf50;
+}
+
+.histogram__bar_red {
+  background-color: red;
+}
+
+.controls {
+  text-align: center;
+}
